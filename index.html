@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Motoo 隐私政策 —— 了解 Motoo 记忆类 App 如何处理你的信息与设备权限。">
+  <title>Motoo 隐私政策</title>
+  <style>
+    :root {
+      --page: #f2f1ed;
+      --card: #ffffff;
+      --ink: #0f1b2d;
+      --muted: #5c6470;
+      --accent: #1a1818;
+      --border: rgba(15, 27, 45, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: var(--page);
+      color: var(--ink);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    header {
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(28px, 5vw, 36px);
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .effective {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    main {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px 24px;
+      box-shadow: 0 10px 30px rgba(15, 27, 45, 0.06);
+    }
+
+    @media (min-width: 640px) {
+      main {
+        padding: 36px 40px;
+      }
+    }
+
+    section + section {
+      margin-top: 28px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 0 0 12px;
+      padding-left: 1.25em;
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 0;
+      font-size: 15px;
+    }
+
+    th,
+    td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #faf9f7;
+      width: 34%;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">Motoo</div>
+      <h1>隐私政策</h1>
+      <p class="effective">生效日期：2026 年 6 月 23 日</p>
+    </header>
+
+    <main>
+      <section>
+        <p>
+          感谢你使用 <strong>Motoo</strong>。Motoo 是一款「本地优先」的记忆类 App ——
+          你拍下的瞬间、抠出的贴纸、归集的藏馆，默认都<strong>保存在你的设备本地</strong>。
+          我们非常重视你的隐私，本政策说明 Motoo 如何处理你的信息。
+        </p>
+      </section>
+
+      <section>
+        <h2>一、我们如何处理你的信息</h2>
+        <p>
+          Motoo 的核心功能（拍摄、AI 抠图、玻璃球收藏、日历与藏馆回看）
+          <strong>全部在你的设备上本地完成</strong>，不会将你的照片或内容上传到我们的服务器
+          （我们也没有用于存储你内容的服务器）。
+        </p>
+        <p>具体涉及：</p>
+        <ul>
+          <li>
+            <strong>照片与图像</strong>：当你用相机拍摄或从相册导入时，图像与抠图结果保存在你设备的本地存储中。
+            抠图（主体识别）由系统的设备端 Vision 框架完成，<strong>不经过网络</strong>。
+          </li>
+          <li>
+            <strong>位置信息（可选）</strong>：若你授权定位，Motoo 会在你拍摄时记录瞬间的坐标，用于「地图回看」。
+            我们也会读取你所选照片的 EXIF 中已包含的 GPS 信息用于同一目的。位置信息
+            <strong>仅保存在本地</strong>，用于在地图上展示你的瞬间，不会上传。
+          </li>
+          <li>
+            <strong>本地用户档案</strong>：昵称、头像字母、会员状态等保存在设备本地。
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>二、设备权限说明</h2>
+        <p>Motoo 会在需要时向你申请以下权限，你可随时在系统「设置」中关闭：</p>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">权限</th>
+              <th scope="col">用途</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>相机</td>
+              <td>拍摄要封存的瞬间</td>
+            </tr>
+            <tr>
+              <td>相册 / 照片</td>
+              <td>导入已有照片、（可选）导出贴纸到相册</td>
+            </tr>
+            <tr>
+              <td>定位</td>
+              <td>（可选）记录瞬间坐标用于地图回看</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>三、数据存储与同步</h2>
+        <ul>
+          <li><strong>本地存储</strong>：你的全部内容默认仅存于本设备。</li>
+          <li>
+            <strong>iCloud 同步（如开启）</strong>：若你启用跨设备同步，数据会通过
+            <strong>你自己的 Apple iCloud 账户</strong>在你的设备间同步。该过程由 Apple iCloud 提供并受
+            <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple 隐私政策</a>
+            约束，我们无法访问你 iCloud 中的内容。
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>四、购买信息</h2>
+        <p>
+          会员订阅与购买通过 <strong>Apple App Store</strong> 处理。我们
+          <strong>不会</strong>收到或存储你的支付方式、银行卡号等支付信息；相关交易由 Apple
+          依其条款与隐私政策处理。
+        </p>
+      </section>
+
+      <section>
+        <h2>五、我们不做的事</h2>
+        <ul>
+          <li>我们<strong>不收集</strong>用于追踪你的个人身份信息，也<strong>不要求注册账户</strong>即可使用核心功能。</li>
+          <li>我们<strong>不接入</strong>第三方广告或分析 SDK 来收集你的使用数据。</li>
+          <li>我们<strong>不出售、不出租</strong>你的个人信息给任何第三方。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>六、儿童隐私</h2>
+        <p>Motoo 不面向 13 周岁以下儿童，也不会有意收集儿童的个人信息。</p>
+      </section>
+
+      <section>
+        <h2>七、你的权利与选择</h2>
+        <ul>
+          <li>
+            <strong>删除数据</strong>：你可在 App 内删除单条瞬间或藏馆；
+            <strong>卸载 App</strong> 即会清除设备本地的全部 Motoo 数据。
+          </li>
+          <li><strong>关闭权限</strong>：可随时在系统「设置」关闭相机 / 相册 / 定位授权。</li>
+          <li><strong>管理 iCloud 数据</strong>：如启用同步，可在「设置 → Apple 账户 → iCloud」中管理。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>八、政策更新</h2>
+        <p>
+          我们可能不时更新本政策。重大变更会在本页更新「生效日期」，并在适当情况下于 App 内提示。
+        </p>
+      </section>
+
+      <section>
+        <h2>九、联系我们</h2>
+        <p>
+          如对本隐私政策有任何疑问，请联系：
+          <a href="mailto:caiyuxuanjcgs@126.com">caiyuxuanjcgs@126.com</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>© Motoo · 本地优先的记忆 App</footer>
+  </div>
+</body>
+</html>
