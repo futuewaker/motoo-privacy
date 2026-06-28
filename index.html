@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Motoo 隐私政策 —— 了解 Motoo 记忆类 App 如何处理你的信息与设备权限。">
-  <title>Motoo 隐私政策</title>
+  <meta name="description" content="Motoo Privacy Policy — 了解 Motoo 记忆类 App 如何处理你的信息与设备权限。">
+  <title>Motoo 隐私政策 · Privacy Policy</title>
   <style>
     :root {
       --page: #f2f1ed;
@@ -15,9 +15,7 @@
       --border: rgba(15, 27, 45, 0.08);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -35,9 +33,7 @@
       padding: 32px 20px 64px;
     }
 
-    header {
-      margin-bottom: 28px;
-    }
+    header { margin-bottom: 28px; }
 
     .brand {
       display: inline-block;
@@ -57,10 +53,30 @@
     }
 
     .effective {
-      margin: 0;
+      margin: 0 0 16px;
       color: var(--muted);
       font-size: 15px;
     }
+
+    .lang-nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .lang-nav a {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .lang-nav a:hover { border-color: rgba(15, 27, 45, 0.2); }
 
     main {
       background: var(--card);
@@ -68,12 +84,30 @@
       border-radius: 20px;
       padding: 28px 24px;
       box-shadow: 0 10px 30px rgba(15, 27, 45, 0.06);
+      margin-top: 20px;
     }
 
     @media (min-width: 640px) {
-      main {
-        padding: 36px 40px;
-      }
+      main { padding: 36px 40px; }
+    }
+
+    .lang-block + .lang-block {
+      margin-top: 40px;
+      padding-top: 40px;
+      border-top: 2px solid var(--border);
+    }
+
+    .lang-label {
+      display: inline-block;
+      margin: 0 0 20px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      background: #faf9f7;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
 
     section + section {
@@ -88,22 +122,15 @@
       line-height: 1.35;
     }
 
-    p {
-      margin: 0 0 12px;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
+    p { margin: 0 0 12px; }
+    p:last-child { margin-bottom: 0; }
 
     ul {
       margin: 0 0 12px;
       padding-left: 1.25em;
     }
 
-    li + li {
-      margin-top: 6px;
-    }
+    li + li { margin-top: 6px; }
 
     table {
       width: 100%;
@@ -112,8 +139,7 @@
       font-size: 15px;
     }
 
-    th,
-    td {
+    th, td {
       border: 1px solid var(--border);
       padding: 10px 12px;
       text-align: left;
@@ -131,9 +157,7 @@
       text-underline-offset: 2px;
     }
 
-    strong {
-      font-weight: 600;
-    }
+    strong { font-weight: 600; }
 
     footer {
       margin-top: 24px;
@@ -147,135 +171,262 @@
   <div class="wrap">
     <header>
       <div class="brand">Motoo</div>
-      <h1>隐私政策</h1>
-      <p class="effective">生效日期：2026 年 6 月 23 日</p>
+      <h1>隐私政策 · Privacy Policy</h1>
+      <p class="effective">生效日期 Effective date: 2026 年 6 月 28 日 · June 28, 2026</p>
+      <nav class="lang-nav" aria-label="Language">
+        <a href="#zh">简体中文</a>
+        <a href="#en">English</a>
+      </nav>
     </header>
 
     <main>
-      <section>
-        <p>
-          感谢你使用 <strong>Motoo</strong>。Motoo 是一款「本地优先」的记忆类 App ——
-          你拍下的瞬间、抠出的贴纸、归集的藏馆，默认都<strong>保存在你的设备本地</strong>。
-          我们非常重视你的隐私，本政策说明 Motoo 如何处理你的信息。
-        </p>
-      </section>
+      <!-- 简体中文 -->
+      <article id="zh" class="lang-block" lang="zh-CN">
+        <div class="lang-label">简体中文</div>
 
-      <section>
-        <h2>一、我们如何处理你的信息</h2>
-        <p>
-          Motoo 的核心功能（拍摄、AI 抠图、玻璃球收藏、日历与藏馆回看）
-          <strong>全部在你的设备上本地完成</strong>，不会将你的照片或内容上传到我们的服务器
-          （我们也没有用于存储你内容的服务器）。
-        </p>
-        <p>具体涉及：</p>
-        <ul>
-          <li>
-            <strong>照片与图像</strong>：当你用相机拍摄或从相册导入时，图像与抠图结果保存在你设备的本地存储中。
-            抠图（主体识别）由系统的设备端 Vision 框架完成，<strong>不经过网络</strong>。
-          </li>
-          <li>
-            <strong>位置信息（可选）</strong>：若你授权定位，Motoo 会在你拍摄时记录瞬间的坐标，用于「地图回看」。
-            我们也会读取你所选照片的 EXIF 中已包含的 GPS 信息用于同一目的。位置信息
-            <strong>仅保存在本地</strong>，用于在地图上展示你的瞬间，不会上传。
-          </li>
-          <li>
-            <strong>本地用户档案</strong>：昵称、头像字母、会员状态等保存在设备本地。
-          </li>
-        </ul>
-      </section>
+        <section>
+          <p>
+            感谢你使用 <strong>Motoo</strong>。Motoo 是一款「本地优先」的记忆类 App ——
+            你拍下的瞬间、抠出的贴纸、归集的藏馆，默认都<strong>保存在你的设备本地</strong>。
+            我们非常重视你的隐私，本政策说明 Motoo 如何处理你的信息。
+          </p>
+        </section>
 
-      <section>
-        <h2>二、设备权限说明</h2>
-        <p>Motoo 会在需要时向你申请以下权限，你可随时在系统「设置」中关闭：</p>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">权限</th>
-              <th scope="col">用途</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>相机</td>
-              <td>拍摄要封存的瞬间</td>
-            </tr>
-            <tr>
-              <td>相册 / 照片</td>
-              <td>导入已有照片、（可选）导出贴纸到相册</td>
-            </tr>
-            <tr>
-              <td>定位</td>
-              <td>（可选）记录瞬间坐标用于地图回看</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+        <section>
+          <h2>一、我们如何处理你的信息</h2>
+          <p>
+            Motoo 的核心功能（拍摄、AI 抠图、玻璃球收藏、日历与藏馆回看）
+            <strong>默认在你的设备上本地完成</strong>。个人玻璃球与藏馆数据通过
+            <strong>iCloud（CloudKit）</strong> 在你的 Apple 账号设备间同步，
+            <strong>不会经过 Motoo 自有服务器</strong>。
+          </p>
+          <p><strong>例外：多人「共享藏馆」功能</strong>（设置 → 我们的球 / 珍藏页共享藏馆）。若你主动创建或加入共享藏馆：</p>
+          <ul>
+            <li>共享藏馆内的<strong>贴纸图片</strong>会上传至我们的云服务（<strong>Supabase Storage</strong>）以便与其他成员同步；</li>
+            <li>你的 <strong>Motoo 账号标识</strong>（Sign in with Apple）、<strong>设备推送 token</strong> 会保存在 Supabase，用于向成员发送「TA 封存了贴纸」等通知；</li>
+            <li>若你设置头像，头像图片可能上传至 Supabase Storage；</li>
+            <li>该功能<strong>需登录</strong>；不登录时个人玻璃球仍可正常使用。</li>
+          </ul>
+          <p>具体涉及：</p>
+          <ul>
+            <li>
+              <strong>照片与图像</strong>：当你用相机拍摄或从相册导入时，图像与抠图结果保存在你设备的本地存储中。
+              抠图（主体识别）由系统的设备端 Vision 框架完成，<strong>不经过网络</strong>。
+            </li>
+            <li>
+              <strong>位置信息（可选）</strong>：若你授权定位，Motoo 会在你拍摄时记录瞬间的坐标，用于「地图回看」。
+              我们也会读取你所选照片的 EXIF 中已包含的 GPS 信息用于同一目的。位置信息
+              <strong>仅保存在本地</strong>，不会上传。
+            </li>
+            <li>
+              <strong>本地用户档案</strong>：昵称、头像、会员状态等保存在设备本地；共享功能相关的账号信息按上文说明同步至 Supabase。
+            </li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>三、数据存储与同步</h2>
-        <ul>
-          <li><strong>本地存储</strong>：你的全部内容默认仅存于本设备。</li>
-          <li>
-            <strong>iCloud 同步（如开启）</strong>：若你启用跨设备同步，数据会通过
-            <strong>你自己的 Apple iCloud 账户</strong>在你的设备间同步。该过程由 Apple iCloud 提供并受
-            <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple 隐私政策</a>
-            约束，我们无法访问你 iCloud 中的内容。
-          </li>
-        </ul>
-      </section>
+        <section>
+          <h2>二、设备权限说明</h2>
+          <p>Motoo 会在需要时向你申请以下权限，你可随时在系统「设置」中关闭：</p>
+          <table>
+            <thead>
+              <tr><th scope="col">权限</th><th scope="col">用途</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>相机</td><td>拍摄要封存的瞬间</td></tr>
+              <tr><td>相册 / 照片</td><td>导入已有照片、（可选）导出贴纸到相册</td></tr>
+              <tr><td>定位</td><td>（可选）记录瞬间坐标用于地图回看</td></tr>
+              <tr><td>通知</td><td>（可选）共享藏馆成员活动提醒</td></tr>
+            </tbody>
+          </table>
+        </section>
 
-      <section>
-        <h2>四、购买信息</h2>
-        <p>
-          会员订阅与购买通过 <strong>Apple App Store</strong> 处理。我们
-          <strong>不会</strong>收到或存储你的支付方式、银行卡号等支付信息；相关交易由 Apple
-          依其条款与隐私政策处理。
-        </p>
-      </section>
+        <section>
+          <h2>三、数据存储与同步</h2>
+          <ul>
+            <li><strong>本地存储</strong>：你的个人内容默认仅存于本设备。</li>
+            <li>
+              <strong>iCloud 同步（如开启）</strong>：若你启用跨设备同步，数据会通过
+              <strong>你自己的 Apple iCloud 账户</strong>在你的设备间同步。该过程由 Apple iCloud 提供并受
+              <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple 隐私政策</a>
+              约束，我们无法访问你 iCloud 中的内容。
+            </li>
+            <li>
+              <strong>共享藏馆（可选）</strong>：仅当你创建或加入共享藏馆时，相关贴纸与账号信息才会上传至 Supabase（见上文）。
+            </li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>五、我们不做的事</h2>
-        <ul>
-          <li>我们<strong>不收集</strong>用于追踪你的个人身份信息，也<strong>不要求注册账户</strong>即可使用核心功能。</li>
-          <li>我们<strong>不接入</strong>第三方广告或分析 SDK 来收集你的使用数据。</li>
-          <li>我们<strong>不出售、不出租</strong>你的个人信息给任何第三方。</li>
-        </ul>
-      </section>
+        <section>
+          <h2>四、购买信息</h2>
+          <p>
+            会员订阅与购买通过 <strong>Apple App Store</strong> 处理。我们
+            <strong>不会</strong>收到或存储你的支付方式、银行卡号等支付信息；相关交易由 Apple
+            依其条款与隐私政策处理。
+          </p>
+        </section>
 
-      <section>
-        <h2>六、儿童隐私</h2>
-        <p>Motoo 不面向 13 周岁以下儿童，也不会有意收集儿童的个人信息。</p>
-      </section>
+        <section>
+          <h2>五、我们不做的事</h2>
+          <ul>
+            <li>我们<strong>不收集</strong>用于追踪你的个人身份信息，也<strong>不要求注册账户</strong>即可使用核心功能。</li>
+            <li>我们<strong>不接入</strong>第三方广告或分析 SDK 来收集你的使用数据。</li>
+            <li>我们<strong>不出售、不出租</strong>你的个人信息给任何第三方。</li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>七、你的权利与选择</h2>
-        <ul>
-          <li>
-            <strong>删除数据</strong>：你可在 App 内删除单条瞬间或藏馆；
-            <strong>卸载 App</strong> 即会清除设备本地的全部 Motoo 数据。
-          </li>
-          <li><strong>关闭权限</strong>：可随时在系统「设置」关闭相机 / 相册 / 定位授权。</li>
-          <li><strong>管理 iCloud 数据</strong>：如启用同步，可在「设置 → Apple 账户 → iCloud」中管理。</li>
-        </ul>
-      </section>
+        <section>
+          <h2>六、儿童隐私</h2>
+          <p>Motoo 不面向 13 周岁以下儿童，也不会有意收集儿童的个人信息。</p>
+        </section>
 
-      <section>
-        <h2>八、政策更新</h2>
-        <p>
-          我们可能不时更新本政策。重大变更会在本页更新「生效日期」，并在适当情况下于 App 内提示。
-        </p>
-      </section>
+        <section>
+          <h2>七、你的权利与选择</h2>
+          <ul>
+            <li>
+              <strong>删除数据</strong>：你可在 App 内删除单条瞬间或藏馆；
+              <strong>卸载 App</strong> 即会清除设备本地的全部 Motoo 数据。
+            </li>
+            <li><strong>关闭权限</strong>：可随时在系统「设置」关闭相机 / 相册 / 定位 / 通知授权。</li>
+            <li><strong>管理 iCloud 数据</strong>：如启用同步，可在「设置 → Apple 账户 → iCloud」中管理。</li>
+            <li><strong>退出共享藏馆</strong>：可在 App 内退出或解散共享藏馆；退出后不再接收该藏馆的云端同步。</li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>九、联系我们</h2>
-        <p>
-          如对本隐私政策有任何疑问，请联系：
-          <a href="mailto:caiyuxuanjcgs@126.com">caiyuxuanjcgs@126.com</a>
-        </p>
-      </section>
+        <section>
+          <h2>八、政策更新</h2>
+          <p>我们可能不时更新本政策。重大变更会在本页更新「生效日期」，并在适当情况下于 App 内提示。</p>
+        </section>
+
+        <section>
+          <h2>九、联系我们</h2>
+          <p>
+            如对本隐私政策有任何疑问，请联系：
+            <a href="mailto:caiyuxuanjcgs@126.com">caiyuxuanjcgs@126.com</a>
+          </p>
+        </section>
+      </article>
+
+      <!-- English -->
+      <article id="en" class="lang-block" lang="en">
+        <div class="lang-label">English</div>
+
+        <section>
+          <p>
+            Thank you for using <strong>Motoo</strong>. Motoo is a local-first memory app — the moments you capture,
+            stickers you create, and collections you organize are <strong>stored on your device by default</strong>.
+            We take your privacy seriously. This policy explains how Motoo handles your information.
+          </p>
+        </section>
+
+        <section>
+          <h2>1. How We Handle Your Information</h2>
+          <p>
+            Core Motoo features (capture, on-device AI cutout, glass ball collections, calendar and gallery review)
+            <strong>run locally on your device by default</strong>. Personal glass ball and collection data syncs across
+            your Apple devices via <strong>iCloud (CloudKit)</strong> and does <strong>not pass through Motoo-owned servers</strong>.
+          </p>
+          <p><strong>Exception: Shared Collections</strong> (Settings → Our Ball / shared collections in Gallery). If you create or join a shared collection:</p>
+          <ul>
+            <li><strong>Sticker images</strong> in the shared collection are uploaded to our cloud service (<strong>Supabase Storage</strong>) so members can view and sync them;</li>
+            <li>Your <strong>Motoo account identifier</strong> (Sign in with Apple) and <strong>device push token</strong> are stored in Supabase to send activity notifications (e.g., when someone adds a sticker);</li>
+            <li>If you set a profile avatar, the avatar image may be uploaded to Supabase Storage;</li>
+            <li>This feature <strong>requires sign-in</strong>. Your personal glass ball works without an account.</li>
+          </ul>
+          <p>Details:</p>
+          <ul>
+            <li>
+              <strong>Photos &amp; images</strong>: When you capture or import photos, images and cutout results are stored locally.
+              Cutout (subject segmentation) uses the on-device Vision framework and <strong>does not use the network</strong>.
+            </li>
+            <li>
+              <strong>Location (optional)</strong>: If you grant location access, Motoo records coordinates when you capture moments for map review.
+              We may also read GPS from photo EXIF for the same purpose. Location data stays <strong>on device</strong> and is not uploaded.
+            </li>
+            <li>
+              <strong>Local profile</strong>: Display name, avatar, and membership status are stored locally; account data for shared features is synced to Supabase as described above.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>2. Device Permissions</h2>
+          <p>Motoo requests the following permissions when needed. You can revoke them anytime in iOS Settings:</p>
+          <table>
+            <thead>
+              <tr><th scope="col">Permission</th><th scope="col">Purpose</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Camera</td><td>Capture moments to seal</td></tr>
+              <tr><td>Photos</td><td>Import photos; optionally export stickers to your library</td></tr>
+              <tr><td>Location</td><td>(Optional) Record coordinates for map review</td></tr>
+              <tr><td>Notifications</td><td>(Optional) Alerts for shared collection activity</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2>3. Storage &amp; Sync</h2>
+          <ul>
+            <li><strong>Local storage</strong>: Your personal content stays on your device by default.</li>
+            <li>
+              <strong>iCloud sync (optional)</strong>: If enabled, data syncs across your devices via your Apple iCloud account,
+              governed by <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple's Privacy Policy</a>.
+              We cannot access your iCloud data.
+            </li>
+            <li>
+              <strong>Shared collections (optional)</strong>: Relevant stickers and account data are uploaded to Supabase only when you create or join a shared collection (see above).
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. Purchases</h2>
+          <p>
+            Membership subscriptions and purchases are processed by the <strong>Apple App Store</strong>.
+            We do <strong>not</strong> receive or store payment card details; Apple handles transactions under its own terms and privacy policy.
+          </p>
+        </section>
+
+        <section>
+          <h2>5. What We Don't Do</h2>
+          <ul>
+            <li>We do <strong>not</strong> collect personally identifiable information for tracking, and you can use core features <strong>without creating an account</strong>.</li>
+            <li>We do <strong>not</strong> integrate third-party advertising or analytics SDKs to collect usage data.</li>
+            <li>We do <strong>not</strong> sell or rent your personal information to third parties.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>6. Children's Privacy</h2>
+          <p>Motoo is not directed at children under 13, and we do not knowingly collect children's personal information.</p>
+        </section>
+
+        <section>
+          <h2>7. Your Choices</h2>
+          <ul>
+            <li><strong>Delete data</strong>: Delete individual moments or collections in the app; uninstalling removes all local Motoo data.</li>
+            <li><strong>Revoke permissions</strong>: Turn off camera, photos, location, or notifications in iOS Settings anytime.</li>
+            <li><strong>Manage iCloud</strong>: Control synced data in Settings → Apple Account → iCloud.</li>
+            <li><strong>Leave shared collections</strong>: Leave or dissolve a shared collection in the app to stop cloud sync for that collection.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>8. Policy Updates</h2>
+          <p>We may update this policy from time to time. Material changes will update the effective date on this page and may be noted in the app when appropriate.</p>
+        </section>
+
+        <section>
+          <h2>9. Contact Us</h2>
+          <p>
+            Questions about this privacy policy:
+            <a href="mailto:caiyuxuanjcgs@126.com">caiyuxuanjcgs@126.com</a>
+          </p>
+        </section>
+      </article>
     </main>
 
-    <footer>© Motoo · 本地优先的记忆 App</footer>
+    <footer>© Motoo · Local-first memory app</footer>
   </div>
 </body>
 </html>
