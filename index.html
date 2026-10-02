@@ -168,265 +168,106 @@
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">Motoo</div>
-      <h1>隐私政策 · Privacy Policy</h1>
-      <p class="effective">生效日期 Effective date: 2026 年 6 月 28 日 · June 28, 2026</p>
-      <nav class="lang-nav" aria-label="Language">
-        <a href="#zh">简体中文</a>
-        <a href="#en">English</a>
-      </nav>
-    </header>
-
-    <main>
-      <!-- 简体中文 -->
-      <article id="zh" class="lang-block" lang="zh-CN">
-        <div class="lang-label">简体中文</div>
-
-        <section>
-          <p>
-            感谢你使用 <strong>Motoo</strong>。Motoo 是一款「本地优先」的记忆类 App ——
-            你拍下的瞬间、抠出的贴纸、归集的藏馆，默认都<strong>保存在你的设备本地</strong>。
-            我们非常重视你的隐私，本政策说明 Motoo 如何处理你的信息。
-          </p>
-        </section>
-
-        <section>
-          <h2>一、我们如何处理你的信息</h2>
-          <p>
-            Motoo 的核心功能（拍摄、AI 抠图、玻璃球收藏、日历与藏馆回看）
-            <strong>默认在你的设备上本地完成</strong>。个人玻璃球与藏馆数据通过
-            <strong>iCloud（CloudKit）</strong> 在你的 Apple 账号设备间同步，
-            <strong>不会经过 Motoo 自有服务器</strong>。
-          </p>
-          <p><strong>例外：多人「共享藏馆」功能</strong>（设置 → 我们的球 / 珍藏页共享藏馆）。若你主动创建或加入共享藏馆：</p>
-          <ul>
-            <li>共享藏馆内的<strong>贴纸图片</strong>会上传至我们的云服务（<strong>Supabase Storage</strong>）以便与其他成员同步；</li>
-            <li>你的 <strong>Motoo 账号标识</strong>（Sign in with Apple）、<strong>设备推送 token</strong> 会保存在 Supabase，用于向成员发送「TA 封存了贴纸」等通知；</li>
-            <li>若你设置头像，头像图片可能上传至 Supabase Storage；</li>
-            <li>该功能<strong>需登录</strong>；不登录时个人玻璃球仍可正常使用。</li>
-          </ul>
-          <p>具体涉及：</p>
-          <ul>
-            <li>
-              <strong>照片与图像</strong>：当你用相机拍摄或从相册导入时，图像与抠图结果保存在你设备的本地存储中。
-              抠图（主体识别）由系统的设备端 Vision 框架完成，<strong>不经过网络</strong>。
-            </li>
-            <li>
-              <strong>位置信息（可选）</strong>：若你授权定位，Motoo 会在你拍摄时记录瞬间的坐标，用于「地图回看」。
-              我们也会读取你所选照片的 EXIF 中已包含的 GPS 信息用于同一目的。位置信息
-              <strong>仅保存在本地</strong>，不会上传。
-            </li>
-            <li>
-              <strong>本地用户档案</strong>：昵称、头像、会员状态等保存在设备本地；共享功能相关的账号信息按上文说明同步至 Supabase。
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>二、设备权限说明</h2>
-          <p>Motoo 会在需要时向你申请以下权限，你可随时在系统「设置」中关闭：</p>
-          <table>
-            <thead>
-              <tr><th scope="col">权限</th><th scope="col">用途</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>相机</td><td>拍摄要封存的瞬间</td></tr>
-              <tr><td>相册 / 照片</td><td>导入已有照片、（可选）导出贴纸到相册</td></tr>
-              <tr><td>定位</td><td>（可选）记录瞬间坐标用于地图回看</td></tr>
-              <tr><td>通知</td><td>（可选）共享藏馆成员活动提醒</td></tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section>
-          <h2>三、数据存储与同步</h2>
-          <ul>
-            <li><strong>本地存储</strong>：你的个人内容默认仅存于本设备。</li>
-            <li>
-              <strong>iCloud 同步（如开启）</strong>：若你启用跨设备同步，数据会通过
-              <strong>你自己的 Apple iCloud 账户</strong>在你的设备间同步。该过程由 Apple iCloud 提供并受
-              <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple 隐私政策</a>
-              约束，我们无法访问你 iCloud 中的内容。
-            </li>
-            <li>
-              <strong>共享藏馆（可选）</strong>：仅当你创建或加入共享藏馆时，相关贴纸与账号信息才会上传至 Supabase（见上文）。
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>四、购买信息</h2>
-          <p>
-            会员订阅与购买通过 <strong>Apple App Store</strong> 处理。我们
-            <strong>不会</strong>收到或存储你的支付方式、银行卡号等支付信息；相关交易由 Apple
-            依其条款与隐私政策处理。
-          </p>
-        </section>
-
-        <section>
-          <h2>五、我们不做的事</h2>
-          <ul>
-            <li>我们<strong>不收集</strong>用于追踪你的个人身份信息，也<strong>不要求注册账户</strong>即可使用核心功能。</li>
-            <li>我们<strong>不接入</strong>第三方广告或分析 SDK 来收集你的使用数据。</li>
-            <li>我们<strong>不出售、不出租</strong>你的个人信息给任何第三方。</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>六、儿童隐私</h2>
-          <p>Motoo 不面向 13 周岁以下儿童，也不会有意收集儿童的个人信息。</p>
-        </section>
-
-        <section>
-          <h2>七、你的权利与选择</h2>
-          <ul>
-            <li>
-              <strong>删除数据</strong>：你可在 App 内删除单条瞬间或藏馆；
-              <strong>卸载 App</strong> 即会清除设备本地的全部 Motoo 数据。
-            </li>
-            <li><strong>关闭权限</strong>：可随时在系统「设置」关闭相机 / 相册 / 定位 / 通知授权。</li>
-            <li><strong>管理 iCloud 数据</strong>：如启用同步，可在「设置 → Apple 账户 → iCloud」中管理。</li>
-            <li><strong>退出共享藏馆</strong>：可在 App 内退出或解散共享藏馆；退出后不再接收该藏馆的云端同步。</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>八、政策更新</h2>
-          <p>我们可能不时更新本政策。重大变更会在本页更新「生效日期」，并在适当情况下于 App 内提示。</p>
-        </section>
-
-        <section>
-          <h2>九、联系我们</h2>
-          <p>
-            如对本隐私政策有任何疑问，请联系：
-            <a href="mailto:caiyuxuanjcgs@126.com">caiyuxuanjcgs@126.com</a>
-          </p>
-        </section>
-      </article>
-
-      <!-- English -->
-      <article id="en" class="lang-block" lang="en">
-        <div class="lang-label">English</div>
-
-        <section>
-          <p>
-            Thank you for using <strong>Motoo</strong>. Motoo is a local-first memory app — the moments you capture,
-            stickers you create, and collections you organize are <strong>stored on your device by default</strong>.
-            We take your privacy seriously. This policy explains how Motoo handles your information.
-          </p>
-        </section>
-
-        <section>
-          <h2>1. How We Handle Your Information</h2>
-          <p>
-            Core Motoo features (capture, on-device AI cutout, glass ball collections, calendar and gallery review)
-            <strong>run locally on your device by default</strong>. Personal glass ball and collection data syncs across
-            your Apple devices via <strong>iCloud (CloudKit)</strong> and does <strong>not pass through Motoo-owned servers</strong>.
-          </p>
-          <p><strong>Exception: Shared Collections</strong> (Settings → Our Ball / shared collections in Gallery). If you create or join a shared collection:</p>
-          <ul>
-            <li><strong>Sticker images</strong> in the shared collection are uploaded to our cloud service (<strong>Supabase Storage</strong>) so members can view and sync them;</li>
-            <li>Your <strong>Motoo account identifier</strong> (Sign in with Apple) and <strong>device push token</strong> are stored in Supabase to send activity notifications (e.g., when someone adds a sticker);</li>
-            <li>If you set a profile avatar, the avatar image may be uploaded to Supabase Storage;</li>
-            <li>This feature <strong>requires sign-in</strong>. Your personal glass ball works without an account.</li>
-          </ul>
-          <p>Details:</p>
-          <ul>
-            <li>
-              <strong>Photos &amp; images</strong>: When you capture or import photos, images and cutout results are stored locally.
-              Cutout (subject segmentation) uses the on-device Vision framework and <strong>does not use the network</strong>.
-            </li>
-            <li>
-              <strong>Location (optional)</strong>: If you grant location access, Motoo records coordinates when you capture moments for map review.
-              We may also read GPS from photo EXIF for the same purpose. Location data stays <strong>on device</strong> and is not uploaded.
-            </li>
-            <li>
-              <strong>Local profile</strong>: Display name, avatar, and membership status are stored locally; account data for shared features is synced to Supabase as described above.
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>2. Device Permissions</h2>
-          <p>Motoo requests the following permissions when needed. You can revoke them anytime in iOS Settings:</p>
-          <table>
-            <thead>
-              <tr><th scope="col">Permission</th><th scope="col">Purpose</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Camera</td><td>Capture moments to seal</td></tr>
-              <tr><td>Photos</td><td>Import photos; optionally export stickers to your library</td></tr>
-              <tr><td>Location</td><td>(Optional) Record coordinates for map review</td></tr>
-              <tr><td>Notifications</td><td>(Optional) Alerts for shared collection activity</td></tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section>
-          <h2>3. Storage &amp; Sync</h2>
-          <ul>
-            <li><strong>Local storage</strong>: Your personal content stays on your device by default.</li>
-            <li>
-              <strong>iCloud sync (optional)</strong>: If enabled, data syncs across your devices via your Apple iCloud account,
-              governed by <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple's Privacy Policy</a>.
-              We cannot access your iCloud data.
-            </li>
-            <li>
-              <strong>Shared collections (optional)</strong>: Relevant stickers and account data are uploaded to Supabase only when you create or join a shared collection (see above).
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>4. Purchases</h2>
-          <p>
-            Membership subscriptions and purchases are processed by the <strong>Apple App Store</strong>.
-            We do <strong>not</strong> receive or store payment card details; Apple handles transactions under its own terms and privacy policy.
-          </p>
-        </section>
-
-        <section>
-          <h2>5. What We Don't Do</h2>
-          <ul>
-            <li>We do <strong>not</strong> collect personally identifiable information for tracking, and you can use core features <strong>without creating an account</strong>.</li>
-            <li>We do <strong>not</strong> integrate third-party advertising or analytics SDKs to collect usage data.</li>
-            <li>We do <strong>not</strong> sell or rent your personal information to third parties.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>6. Children's Privacy</h2>
-          <p>Motoo is not directed at children under 13, and we do not knowingly collect children's personal information.</p>
-        </section>
-
-        <section>
-          <h2>7. Your Choices</h2>
-          <ul>
-            <li><strong>Delete data</strong>: Delete individual moments or collections in the app; uninstalling removes all local Motoo data.</li>
-            <li><strong>Revoke permissions</strong>: Turn off camera, photos, location, or notifications in iOS Settings anytime.</li>
-            <li><strong>Manage iCloud</strong>: Control synced data in Settings → Apple Account → iCloud.</li>
-            <li><strong>Leave shared collections</strong>: Leave or dissolve a shared collection in the app to stop cloud sync for that collection.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>8. Policy Updates</h2>
-          <p>We may update this policy from time to time. Material changes will update the effective date on this page and may be noted in the app when appropriate.</p>
-        </section>
-
-        <section>
-          <h2>9. Contact Us</h2>
-          <p>
-            Questions about this privacy policy:
-            <a href="mailto:caiyuxuanjcgs@126.com">caiyuxuanjcgs@126.com</a>
-          </p>
-        </section>
-      </article>
-    </main>
-
-    <footer>© Motoo · Local-first memory app</footer>
-  </div>
+<div class="wrap">
+<header>
+<div class="brand">Motoo</div>
+<h1>隐私政策 · Privacy Policy</h1>
+<p class="effective">生效日期 Effective date: 2026 年 10 月 2 日 · October 2, 2026</p>
+<nav class="lang-nav" aria-label="Language"><a href="#zh">简体中文</a><a href="#en">English</a></nav>
+</header>
+<main>
+<article id="zh" class="lang-block" lang="zh-CN">
+<div class="lang-label">简体中文</div>
+<section>
+<p>感谢你使用 Motoo。本政策说明个人收藏、位置与全球／国家成就、账号、共享藏馆、云端 AI 命名和购买相关数据的处理方式。「本地优先」表示许多功能在设备上运行，并不表示全部数据都不离开设备。</p>
+</section><section>
+<h2>一、个人内容与私人 iCloud 同步</h2>
+<p>拍摄、设备端 Vision 抠图、手动命名和个人回看可以在设备上完成。个人瞬间、照片／贴纸、Live Photo 资源、名称、收藏关系、日期、可用的位置坐标和个人档案保存在设备数据库中。当设备的 Apple 账户和 iCloud 条件允许时，App 使用 SwiftData 与私人 CloudKit 数据库在同一 Apple 账户的设备间同步；这不需要登录 Motoo 账号。同步受设备 iCloud 设置、网络和 Apple 服务可用性影响。</p>
+<p>该私人 CloudKit 数据库由 Apple 提供，Motoo 开发者不能通过自己的 Supabase 后台读取其中的个人收藏。成就、AI 或共享功能仍有各自独立的服务器数据处理，不能据此理解为「所有个人使用均不向服务器传送数据」。小组件读取 App Group 中的本地收藏快照，不自行上传位置或成就数据。</p>
+</section><section>
+<h2>二、位置信息与全球／国家成就</h2>
+<ul><li><strong>拍摄定位（可选）</strong>：在你开启 App 的记录位置选项并授予系统定位权限后，Motoo 在拍摄页面使用定位，记录封存地点。请求的目标精度约为百米，但实际坐标精度受系统与授权设置影响，可能足以识别具体地点；目标精度不等同于匿名化。App 不为此请求后台持续定位。</li><li><strong>导入照片的位置</strong>：当你主动选择照片导入时，App 可能读取该照片已有的 EXIF GPS 坐标。这与实时定位权限不同；关闭系统定位或拍摄位置开关，不会自动删除所选照片原有的 GPS 信息，也不会删除已保存的位置。</li><li><strong>个人保存与同步</strong>：瞬间经纬度用于地图回看，并可能随该瞬间进入你的私人 iCloud 数据库，因此它们不一定只存在于本设备。</li><li><strong>Apple 地理服务</strong>：为了显示地图、解析国家／地区、查询附近地形或核对时区，App 可能将坐标或附近查询区域交给 Apple 的 Core Location／MapKit 服务。坐标的处理适用 Apple 的服务及隐私政策。</li><li><strong>国家与全球成就云端记录</strong>：登录 Motoo 后，封存瞬间时，App 可将由地点解析出的国家／地区代码（例如 CN、JP）、成就／识别类别、瞬间记录标识、封存时间、本地日期和共享成员数发送至 Supabase，并与账号标识关联。用途是国家收集、全球探索及其他成就进度、跨设备恢复和重复记录校验。国家代码属于粗略位置信息；成就请求不包含经纬度，也不上传完整个人照片作为成就记录。</li><li><strong>触发条件与控制</strong>：这类成就记录也可能发生在只保存到个人藏馆时，不以加入共享藏馆或同意云端 AI 命名为前提；没有可用地点时不发送国家代码。关闭云端 AI 命名只停止 AI 图片请求，不会停止已登录账号的成就事件。你可以不登录或退出 Motoo 账号以停止后续账号成就上传；若不希望导入照片提供地点，请选择没有 GPS 信息的照片，或先移除照片位置元数据。已存在的云端成就数据可通过账号删除流程或联系我们处理。</li></ul>
+<p>我们不使用位置或国家成就数据开展广告追踪，也不将其出售给数据经纪商。</p>
+</section><section>
+<h2>三、可选的云端 AI 命名</h2>
+<p>云端 AI 命名默认关闭。首次使用前，App 说明数据用途并要求明确同意。启用后，拍摄或导入进入预览时，压缩后的主体图片和场景缩略图经 Supabase 转发至智谱 AI（GLM），用于生成名称、识别类别和精细识别结果。场景图片可能包含人物、文字、地点线索或背景；请只提交你有权处理的图片。设备端 Vision 抠图本身不依赖这一上传。</p>
+<p>Motoo 使用账号标识（已登录时）、设备标识、图片摘要、请求状态和识别结果管理每日额度、重复请求及服务安全。图片摘要不等于匿名数据，可能与账号或设备关联。Motoo 的额度数据库保存摘要及必要结果，不以额度记录保存图片原件；图片仍会在 AI 请求过程中被服务商处理。</p>
+<p>你可以拒绝授权并继续本地抠图、手动命名和封存，也可以在「设置 → 云端 AI 命名」关闭授权以停止后续 AI 图片请求。已经发送的请求不能撤回；第三方的日志、保存期限和其他处理规则受相应服务政策约束，我们不承诺第三方即时删除或绝不留存请求。</p>
+</section><section>
+<h2>四、账号、共享藏馆与通知</h2>
+<p>Motoo 使用 Sign in with Apple 与 Supabase Auth 提供账号。我们处理 Apple 提供的账号标识、可用的姓名和电子邮箱（包括 Apple 隐藏邮箱）、会话及账号资料，用于登录和账号管理。姓名或邮箱可能只在首次授权时提供；你设置的昵称、头像也可用于共享成员展示。无需登录即可使用个人核心功能；共享、账号成就同步及会员权益关联等在线功能会使用账号。</p>
+<p>当你主动创建、加入或向共享藏馆保存内容时，下列数据会进入 Supabase：藏馆名称、邀请与成员关系、作者标识、贴纸及缩略图、名称／说明、评论、点赞、活动及时间记录。共享 Live 回忆球还会上传相应照片和配对视频资源，文件可能包含拍摄时间等媒体元数据，画面本身也可能透露地点。共享内容按藏馆访问权限展示给成员；被邀请的人加入后可访问相关内容。成员保存或导出的副本不受我们直接控制。</p>
+<p>你设置的云端头像保存在 Supabase Storage；设备推送 token 与账号关联，用于 Apple APNs 发送共享活动通知。拒绝通知不影响个人收藏，但不会自动停止共享数据同步。退出藏馆、隐藏或软删除内容，与立即物理清除服务器文件不同；需要删除账号或进一步清除相关数据时，请使用下文流程或联系我们。</p>
+</section><section>
+<h2>五、购买与权益</h2>
+<p>订阅和 App 内购买由 Apple App Store 处理，我们不接收银行卡号或支付方式详情。Motoo 使用 Apple 验证的商品及交易／原始交易标识、购买及到期状态、交易时间与账号关联数据核验会员、恢复购买并防止重复或错误归属。奖励兑换还可能处理兑换记录、奖励权益和必要的账号关联信息。删除 Motoo 账号不等于取消 Apple 自动续订；请在 Apple 账户的订阅管理中取消。</p>
+</section><section>
+<h2>六、服务商、存储地区与跨地区处理</h2>
+<ul><li><strong>Apple</strong>：提供私人 iCloud／CloudKit、Sign in with Apple、App Store 购买、地图／地理服务和 APNs 通知。其数据处理和存储适用 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。</li><li><strong>Supabase</strong>：提供 Motoo 的账号、共享内容存储、成就记录、权益核验和 AI 请求转发。当前项目数据库区域为日本东京（ap-northeast-1）；边缘函数、网络传输、备份及平台运维不应理解为仅限于该数据库区域。参见 <a href="https://supabase.com/privacy">Supabase 隐私政策</a>。</li><li><strong>智谱 AI</strong>：处理经同意提交的图片和识别请求。参见 <a href="https://open.bigmodel.cn/">智谱开放平台</a> 公布的适用隐私与服务条款；本政策不将其请求处理承诺为只发生在你的设备或 Supabase 数据库区域。</li><li><strong>Cloudflare Pages</strong>：托管本隐私政策网页，访问网页时可能处理 IP 地址、浏览器信息和必要访问日志。参见 <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 隐私政策</a>。本页面不嵌入广告或第三方分析脚本。</li></ul>
+<p>由于上述服务与功能，相关信息可能在你所在国家／地区之外传输、存储或处理。我们使用传输加密、访问控制及账号／藏馆权限限制访问；网络或云服务不代表绝对安全。Motoo 不接入第三方广告或行为分析 SDK，不出售或出租个人信息，不将功能数据用于跨 App 广告追踪。</p>
+<p>服务请求可能产生必要的运行和安全日志，例如 IP 地址、请求时间、响应／错误状态及账号或设备上下文，用于排障、服务可用性和防滥用。这些日志不是广告分析；平台日志和备份的保存与清除受到服务商机制约束。</p>
+</section><section>
+<h2>七、保存期限与删除范围</h2>
+<ul><li><strong>个人设备／iCloud 内容</strong>：保存到你删除相应记录或通过 Apple 管理该 App 的 iCloud 数据。卸载 App 不能保证删除私人 iCloud、Supabase、其他设备或成员已保存的副本。</li><li><strong>账号、成就、权益及共享记录</strong>：按提供相关功能所需保存；目前成就事件没有独立的短期自动过期规则。退出账号、撤销定位或关闭 AI 不会自动删除既有记录。共享内容软删除可能保留数据库行或文件，供同步一致性和删除流程处理。</li><li><strong>AI 额度明细</strong>：当前 Motoo 服务端按清理任务保留最近约 7 天的图片摘要／额度明细；这不表示成就、共享内容或第三方 AI 日志也只有 7 天。</li><li><strong>账号删除</strong>：在「设置」的账号区域进入「删除账号」，按提示重新验证 Apple 身份并完成流程。服务器处理你的账号、本人共享内容／头像、评论／点赞、成就、关联权益和已识别归属于账号的额度数据，撤销相关登录授权。仍有其他成员的藏馆会转交合适成员，其他成员内容不会随你账号一并删除；仅剩你一人的共享藏馆按删除流程清理。App 显示完成前，请保持或重新打开 App 继续流程；关闭 App 可能暂停处理。</li><li><strong>删除后仍需单独管理的内容</strong>：私人设备／iCloud 收藏没有可靠的 Motoo 账号归属，账号删除不会自动抹除它们；你需要在 App 或 Apple iCloud 设置中管理。未关联账号的设备额度记录按其清理规则处理。必要的平台日志／备份也不保证与账号删除同时消失。</li><li><strong>删除完成凭据</strong>：为让请求超时或离线设备能确认完成，我们保留不含已删内容及 Apple 凭证的最小回执（随机请求标识、账号标识、校验摘要、状态与时间）。所有设备回执确认满 30 天后，在后续回执访问时清理；未确认的最小回执可能保留更久，以允许恢复。</li></ul>
+</section><section>
+<h2>八、你的选择、请求与设备权限</h2>
+<p>相机用于拍摄；照片权限／系统照片选择器用于导入或导出；可选的定位用于拍摄地点；可选的通知用于共享活动提醒。你可以在 iOS 设置管理这些权限。撤销权限主要停止后续访问，不清除此前导入或保存的数据。</p>
+<p>你可以在 App 内删除个人内容、退出账号或共享藏馆、关闭云端 AI 命名，并在 Apple 设置管理 iCloud 与订阅。若要访问、更正、导出或删除我们服务器上与你有关的数据，或对跨地区处理提出问题，请发送邮件至 caiyuxuanjcgs@126.com。我们会核验必要的账号归属后处理；请勿发送密码或完整支付信息。</p>
+</section><section>
+<h2>九、儿童与政策更新</h2>
+<p>Motoo 不面向 13 周岁以下儿童。如发现未成年人信息被不当提交，请联系我们处理。我们可能更新本政策，并在本页注明生效日期；涉及重要处理变化时会按适用要求提供通知或取得必要同意。</p>
+</section><section>
+<h2>十、联系我们</h2>
+<p>Motoo 开发者联系邮箱：<a href="mailto:caiyuxuanjcgs@126.com">caiyuxuanjcgs@126.com</a>。</p>
+</section>
+</article>
+<article id="en" class="lang-block" lang="en">
+<div class="lang-label">English</div>
+<section>
+<p>This policy describes personal collections, location and world/country achievements, accounts, shared collections, cloud AI naming and purchases. Local-first means many features run on your device; it does not mean that all data stays on that device.</p>
+</section><section>
+<h2>1. Personal content and private iCloud sync</h2>
+<p>Capture, on-device Vision cutouts, manual naming and personal browsing can run locally. Your device database stores moments, photos/stickers, Live Photo resources, names, collection relationships, dates, available coordinates and profile data. When your Apple account and iCloud are available, SwiftData and private CloudKit sync this content between devices using that Apple account, independently of Motoo sign-in. Sync depends on device iCloud settings, connectivity and Apple&#x27;s availability.</p>
+<p>Apple provides this private database. The Motoo developer cannot read its personal collections through the Motoo Supabase backend. Achievements, AI and sharing have separate server processing described below. Widgets read local App Group snapshots and do not independently upload location or achievement data.</p>
+</section><section>
+<h2>2. Location and world/country achievements</h2>
+<ul><li><strong>Optional camera location:</strong> when you enable location recording and grant system permission, Motoo uses location on the capture screen to save a moment&#x27;s place. The requested accuracy is approximately 100 metres, but actual coordinates depend on system settings and may identify a specific place. Requested accuracy is not anonymisation. Motoo does not request continuous background location for this feature.</li><li><strong>Imported photo location:</strong> photos you select may contain EXIF GPS coordinates, which Motoo can read. This is separate from live location permission. Disabling location permission or the camera location option neither removes existing photo GPS metadata nor deletes saved coordinates.</li><li><strong>Personal storage:</strong> coordinates support map review and can sync with their moment into your private iCloud database; they are not necessarily confined to one device.</li><li><strong>Apple geographic services:</strong> map display, country lookup, nearby terrain searches and time-zone checks may send coordinates or a search region to Apple&#x27;s Core Location/MapKit services, subject to Apple&#x27;s policies.</li><li><strong>Server achievement records:</strong> when signed into Motoo, saving a moment can send its derived country/region code (such as CN or JP), achievement/recognition category, capture identifier, capture time, local date and shared-member count to Supabase, linked to your account. This supports country collection, world exploration and other achievement progress, cross-device recovery and duplicate checks. Country codes are coarse location. The achievement request contains neither latitude/longitude nor a full personal photo.</li><li><strong>Triggers and choices:</strong> these events can also occur for saves to personal collections, independently of joining a shared collection or consenting to cloud AI naming. No country code is sent when no location is available. Disabling AI naming stops AI image requests, not signed-in achievement events. Remain signed out or sign out to stop future account achievement uploads. To avoid location from imports, select photos without GPS metadata or remove their location metadata first. Use account deletion or contact us for existing server achievement records.</li></ul>
+<p>Motoo does not use location or country achievements for advertising tracking or sell them to data brokers.</p>
+</section><section>
+<h2>3. Optional cloud AI naming</h2>
+<p>Cloud AI naming is off by default and requires explicit consent after an explanation. When enabled, entering a capture/import preview sends compressed subject and scene images through Supabase to Zhipu AI (GLM) for names, categories and detailed recognition. Scene images may contain people, text, location clues or background details. Submit only images you are entitled to process. On-device Vision cutouts do not require this upload.</p>
+<p>Account identifiers when signed in, device identifiers, image hashes, request status and recognition results support daily limits, duplicate checks and security. Hashes may remain linked to an account or device and are not necessarily anonymous. Motoo&#x27;s quota database stores hashes and necessary results rather than original images; AI providers still process images during the request.</p>
+<p>You can decline and continue local cutouts, manual naming and saving. Disable cloud AI naming in Settings to stop future AI image requests. Sent requests cannot be recalled. Provider retention and processing are subject to the applicable service policies; we do not promise immediate provider deletion or zero request retention.</p>
+</section><section>
+<h2>4. Accounts, shared collections and notifications</h2>
+<p>Sign in with Apple and Supabase Auth provide Motoo accounts. Apple account identifiers, available names and email addresses (including relay addresses), sessions and profile information support authentication and account management. Apple may provide name/email only on first authorisation. Your chosen nickname and avatar may identify you to collection members. Personal core features work without sign-in; sharing, account achievement sync and membership association use accounts.</p>
+<p>Creating, joining or saving to a shared collection sends collection names, invitation/member relationships, author identifiers, stickers/thumbnails, captions, comments, likes, activities and timestamps to Supabase. Shared Live memory orbs also upload the relevant photo and paired-video resources; files may contain capture-time and other media metadata, and images themselves may reveal places. Members can view content under collection access permissions, including invitees after joining. Copies saved or exported by members are outside our direct control.</p>
+<p>Cloud avatars use Supabase Storage. Account-linked device push tokens support Apple APNs shared-activity notifications. Declining notifications does not stop shared-data sync. Leaving a collection, hiding or soft-deleting content is different from immediate physical removal of server files. For account removal or further deletion, use the process below or contact us.</p>
+</section><section>
+<h2>5. Purchases and entitlements</h2>
+<p>Apple App Store handles subscriptions and in-app purchases. Motoo does not receive card numbers or payment-method details. Apple-verified product and transaction/original-transaction identifiers, purchase/expiry status, transaction times and account associations support membership verification, purchase restoration and ownership checks. Reward redemption may process redemption records, reward entitlements and necessary account associations. Deleting a Motoo account does not cancel an Apple subscription; cancel through your Apple account&#x27;s subscription settings.</p>
+</section><section>
+<h2>6. Providers, regions and international processing</h2>
+<ul><li><strong>Apple:</strong> private iCloud/CloudKit, Sign in with Apple, App Store, geographic/map services and APNs. See <a href="https://www.apple.com/legal/privacy/">Apple&#x27;s Privacy Policy</a>.</li><li><strong>Supabase:</strong> Motoo authentication, shared storage, achievements, entitlement verification and AI request forwarding. The current project database region is Tokyo, Japan (ap-northeast-1). Edge execution, transit, backups and platform operations should not be assumed to stay exclusively within that database region. See <a href="https://supabase.com/privacy">Supabase&#x27;s Privacy Policy</a>.</li><li><strong>Zhipu AI:</strong> consented images and recognition requests. See the applicable privacy/service terms published on the <a href="https://open.bigmodel.cn/">Zhipu Open Platform</a>. Processing is not promised to occur only on your device or in the Supabase database region.</li><li><strong>Cloudflare Pages:</strong> hosts this policy website and may process IP addresses, browser details and necessary access logs. See <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare&#x27;s Privacy Policy</a>. This page embeds no advertising or third-party analytics scripts.</li></ul>
+<p>These services may transmit, store or process information outside your country/region. We use encrypted transport, access controls and account/collection permissions. Network or cloud services cannot guarantee absolute security. Motoo uses no third-party advertising or behavioural analytics SDKs, does not sell or rent personal information and does not use feature data for cross-app advertising tracking.</p>
+<p>Necessary operational/security logs may include IP address, request time, response/error status and account/device context for troubleshooting, availability and abuse prevention. These are not advertising analytics. Provider log and backup retention follows the relevant platform mechanisms.</p>
+</section><section>
+<h2>7. Retention and deletion scope</h2>
+<ul><li><strong>Device/iCloud content:</strong> retained until you delete the relevant records or manage the app&#x27;s iCloud data through Apple. Uninstalling does not guarantee deletion of iCloud, Supabase, other-device or member-saved copies.</li><li><strong>Account, achievements, entitlements and shared records:</strong> retained as needed to provide their functions. Achievement events currently have no separate short-term automatic expiry. Sign-out, revoking location or disabling AI does not delete existing records. Soft-deleted shared content may leave rows/files for sync consistency and deletion processing.</li><li><strong>AI quota details:</strong> current Motoo cleanup retains approximately the most recent seven days of image-hash/quota details. This is not a seven-day limit for achievements, shared content or provider AI logs.</li><li><strong>Account deletion:</strong> choose Delete Account in the account area of Settings, reverify your Apple identity and complete the flow. The server processes your account, your shared content/avatar, comments/likes, achievements, associated entitlements and quota records identified as belonging to the account, and revokes related login authorisation. Collections with other members transfer to an eligible member; other members&#x27; content survives. Collections where you are the last member are cleaned up. Keep or reopen the app to continue until completion is shown; closing it may pause processing.</li><li><strong>Separate data management:</strong> private device/iCloud collections have no reliable Motoo-account ownership and are not automatically erased by account deletion. Manage them in the app or Apple iCloud settings. Unlinked device-only quota records follow their cleanup rules. Necessary provider logs/backups are not guaranteed to disappear at the same time.</li><li><strong>Completion receipts:</strong> minimal receipts without deleted content or Apple credentials retain random request identifiers, account identifiers, verification digests, state and timestamps so offline devices or timed-out requests can confirm completion. Once all device capabilities have been acknowledged for 30 days, subsequent receipt access triggers cleanup; unacknowledged minimal receipts may remain longer for recovery.</li></ul>
+</section><section>
+<h2>8. Choices, requests and device permissions</h2>
+<p>Camera supports capture; Photos permission/system picker supports import/export; optional Location supports capture places; optional Notifications supports shared activity. Manage permissions in iOS Settings. Revocation mainly stops future access and does not erase previously imported or saved data.</p>
+<p>Delete personal content, sign out or leave shared collections, and disable cloud AI naming in the app. Manage iCloud and subscriptions through Apple. To request access, correction, export or deletion of server data, or ask about international processing, contact caiyuxuanjcgs@126.com. We verify necessary account ownership before processing requests. Do not send passwords or full payment details.</p>
+</section><section>
+<h2>9. Children and policy changes</h2>
+<p>Motoo is not directed at children under 13. Contact us if a child&#x27;s information has been submitted improperly. Updates are dated on this page; material processing changes receive notice or necessary consent as applicable.</p>
+</section><section>
+<h2>10. Contact</h2>
+<p>Contact the Motoo developer at <a href="mailto:caiyuxuanjcgs@126.com">caiyuxuanjcgs@126.com</a>.</p>
+</section>
+</article>
+</main>
+<footer>Motoo · Privacy Policy</footer>
+</div>
 </body>
 </html>
