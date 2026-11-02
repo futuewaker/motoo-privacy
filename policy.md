@@ -1,6 +1,6 @@
 # Motoo 隐私政策 · Privacy Policy
 
-**生效日期 Effective date: 2026 年 11 月 2 日 · November 2, 2026**
+**生效日期 Effective date: 2026 年 11 月 3 日 · November 3, 2026**
 
 线上版本：[Motoo 隐私政策](https://motoo-privacy.pages.dev/)
 
@@ -11,6 +11,8 @@
 ### 一、个人内容与私人 iCloud 同步
 
 拍摄、设备端 Vision 抠图、手动命名和个人回看可以在设备上完成。个人瞬间、照片／贴纸、Live Photo 资源、名称、收藏关系、日期、可用的位置坐标和个人档案保存在设备数据库中。当设备的 Apple 账户和 iCloud 条件允许时，App 使用 SwiftData 与私人 CloudKit 数据库在同一 Apple 账户的设备间同步；这不需要登录 Motoo 账号。同步受设备 iCloud 设置、网络和 Apple 服务可用性影响。
+
+**语音备注（可选）**：当你主动使用语音备注时，Motoo 会请求麦克风和语音识别权限，将语音转写为文字。若 Apple 的语音识别支持在当前设备和语言上进行设备内处理，Motoo 要求在设备内识别；否则识别需要联网，语音可能由 Apple 的语音识别服务处理。Apple 对语音数据的处理适用其隐私政策。你可以拒绝或在系统设置中关闭相关权限，改用手动输入。你确认保存的文字，会按照本政策所述的个人收藏或共享藏馆方式保存和同步。
 
 该私人 CloudKit 数据库由 Apple 提供，Motoo 开发者不能通过自己的 Supabase 后台读取其中的个人收藏。成就、AI 或共享功能仍有各自独立的服务器数据处理，不能据此理解为「所有个人使用均不向服务器传送数据」。小组件读取 App Group 中的本地收藏快照，不自行上传位置或成就数据。
 
@@ -47,7 +49,7 @@ Motoo 使用 Sign in with Apple 与 Supabase Auth 提供账号。我们处理 Ap
 
 ### 六、服务商、存储地区与跨地区处理
 
-- **Apple**：提供私人 iCloud／CloudKit、Sign in with Apple、App Store 购买、地图／地理服务和 APNs 通知。其数据处理和存储适用 [Apple 隐私政策](https://www.apple.com/legal/privacy/)。
+- **Apple**：提供私人 iCloud／CloudKit、Sign in with Apple、App Store 购买、地图／地理服务、语音识别服务和 APNs 通知。其数据处理和存储适用 [Apple 隐私政策](https://www.apple.com/legal/privacy/)。
 - **Supabase**：提供 Motoo 的账号、共享内容存储、成就记录、权益核验和 AI 请求转发。当前项目数据库区域为日本东京（ap-northeast-1）；边缘函数、网络传输、备份及平台运维不应理解为仅限于该数据库区域。参见 [Supabase 隐私政策](https://supabase.com/privacy)。
 - **RevenueCat**：提供购买及订阅管理服务，并处理上述购买数据和账号标识以支持购买管理与统计分析。参见 [RevenueCat 隐私政策](https://www.revenuecat.com/privacy-policy)。
 - **智谱 AI**：处理经同意提交的图片和识别请求。参见 [智谱开放平台](https://open.bigmodel.cn/) 公布的适用隐私与服务条款；本政策不将其请求处理承诺为只发生在你的设备或 Supabase 数据库区域。
@@ -68,7 +70,7 @@ Motoo 使用 Sign in with Apple 与 Supabase Auth 提供账号。我们处理 Ap
 
 ### 八、你的选择、请求与设备权限
 
-相机用于拍摄；照片权限／系统照片选择器用于导入或导出；可选的定位用于拍摄地点；可选的通知用于共享活动提醒。你可以在 iOS 设置管理这些权限。撤销权限主要停止后续访问，不清除此前导入或保存的数据。
+相机用于拍摄；照片权限／系统照片选择器用于导入或导出；可选的定位用于拍摄地点；可选的通知用于共享活动提醒；麦克风和语音识别权限用于可选的语音备注转写。你可以在 iOS 设置管理这些权限。撤销权限主要停止后续访问，不清除此前导入或保存的数据。
 
 你可以在 App 内删除个人内容、退出账号或共享藏馆、关闭云端 AI 命名，并在 Apple 设置管理 iCloud 与订阅。若要访问、更正、导出或删除我们服务器上与你有关的数据，或对跨地区处理提出问题，请发送邮件至 caiyuxuanjcgs@126.com。我们会核验必要的账号归属后处理；请勿发送密码或完整支付信息。
 
@@ -87,6 +89,8 @@ This policy describes personal collections, location and world/country achieveme
 ### 1. Personal content and private iCloud sync
 
 Capture, on-device Vision cutouts, manual naming and personal browsing can run locally. Your device database stores moments, photos/stickers, Live Photo resources, names, collection relationships, dates, available coordinates and profile data. When your Apple account and iCloud are available, SwiftData and private CloudKit sync this content between devices using that Apple account, independently of Motoo sign-in. Sync depends on device iCloud settings, connectivity and Apple's availability.
+
+**Optional voice notes:** When you choose to use voice notes, Motoo requests microphone and speech recognition permissions to transcribe your voice into text. If Apple's speech recognizer supports on-device recognition for your device and language, Motoo requires on-device recognition; otherwise recognition requires a network and your audio may be processed by Apple's speech recognition service. Apple's handling of that audio is subject to its privacy policy. You can decline or turn off the relevant permissions in system settings and type instead. Text you choose to save is stored and synced as part of your personal collection or shared collection as described in this policy.
 
 Apple provides this private database. The Motoo developer cannot read its personal collections through the Motoo Supabase backend. Achievements, AI and sharing have separate server processing described below. Widgets read local App Group snapshots and do not independently upload location or achievement data.
 
@@ -123,7 +127,7 @@ Apple App Store handles subscriptions and in-app purchases. Motoo does not recei
 
 ### 6. Providers, regions and international processing
 
-- **Apple:** private iCloud/CloudKit, Sign in with Apple, App Store, geographic/map services and APNs. See [Apple's Privacy Policy](https://www.apple.com/legal/privacy/).
+- **Apple:** private iCloud/CloudKit, Sign in with Apple, App Store, geographic/map services, speech recognition and APNs. See [Apple's Privacy Policy](https://www.apple.com/legal/privacy/).
 - **Supabase:** Motoo authentication, shared storage, achievements, entitlement verification and AI request forwarding. The current project database region is Tokyo, Japan (ap-northeast-1). Edge execution, transit, backups and platform operations should not be assumed to stay exclusively within that database region. See [Supabase's Privacy Policy](https://supabase.com/privacy).
 - **RevenueCat:** purchase and subscription management, including the account identifiers and purchase data described above for purchase management and analytics. See [RevenueCat’s Privacy Policy](https://www.revenuecat.com/privacy-policy).
 - **Zhipu AI:** consented images and recognition requests. See the applicable privacy/service terms published on the [Zhipu Open Platform](https://open.bigmodel.cn/). Processing is not promised to occur only on your device or in the Supabase database region.
@@ -144,7 +148,7 @@ Necessary operational/security logs may include IP address, request time, respon
 
 ### 8. Choices, requests and device permissions
 
-Camera supports capture; Photos permission/system picker supports import/export; optional Location supports capture places; optional Notifications supports shared activity. Manage permissions in iOS Settings. Revocation mainly stops future access and does not erase previously imported or saved data.
+Camera supports capture; Photos permission/system picker supports import/export; optional Location supports capture places; optional Notifications supports shared activity; Microphone and Speech Recognition permissions support optional voice-note transcription. Manage permissions in iOS Settings. Revocation mainly stops future access and does not erase previously imported or saved data.
 
 Delete personal content, sign out or leave shared collections, and disable cloud AI naming in the app. Manage iCloud and subscriptions through Apple. To request access, correction, export or deletion of server data, or ask about international processing, contact caiyuxuanjcgs@126.com. We verify necessary account ownership before processing requests. Do not send passwords or full payment details.
 
