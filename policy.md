@@ -1,6 +1,6 @@
 # Motoo 隐私政策 · Privacy Policy
 
-**生效日期 Effective date: 2026 年 10 月 2 日 · October 2, 2026**
+**生效日期 Effective date: 2026 年 11 月 2 日 · November 2, 2026**
 
 线上版本：[Motoo 隐私政策](https://motoo-privacy.pages.dev/)
 
@@ -37,22 +37,23 @@ Motoo 使用账号标识（已登录时）、设备标识、图片摘要、请�
 
 Motoo 使用 Sign in with Apple 与 Supabase Auth 提供账号。我们处理 Apple 提供的账号标识、可用的姓名和电子邮箱（包括 Apple 隐藏邮箱）、会话及账号资料，用于登录和账号管理。姓名或邮箱可能只在首次授权时提供；你设置的昵称、头像也可用于共享成员展示。无需登录即可使用个人核心功能；共享、账号成就同步及会员权益关联等在线功能会使用账号。
 
-当你主动创建、加入或向共享藏馆保存内容时，下列数据会进入 Supabase：藏馆名称、邀请与成员关系、作者标识、贴纸及缩略图、名称／说明、评论、点赞、活动及时间记录。共享 Live 回忆球还会上传相应照片和配对视频资源，文件可能包含拍摄时间等媒体元数据，画面本身也可能透露地点。共享内容按藏馆访问权限展示给成员；被邀请的人加入后可访问相关内容。成员保存或导出的副本不受我们直接控制。
+当你主动创建、加入或向共享藏馆保存内容时，下列数据会进入 Supabase：藏馆名称、邀请与成员关系、作者标识、贴纸及缩略图、名称／说明、评论、点赞、活动及时间记录，以及你为共享记录提供的位置名称、地址、经纬度和备注（如有）。共享 Live 回忆球还会上传相应照片和配对视频资源，视频可能含声音，文件可能包含拍摄时间或位置信息等媒体元数据，画面本身也可能透露地点。共享内容按藏馆访问权限展示给成员；被邀请的人加入后可访问相关内容。成员保存或导出的副本不受我们直接控制。
 
 你设置的云端头像保存在 Supabase Storage；设备推送 token 与账号关联，用于 Apple APNs 发送共享活动通知。拒绝通知不影响个人收藏，但不会自动停止共享数据同步。退出藏馆、隐藏或软删除内容，与立即物理清除服务器文件不同；需要删除账号或进一步清除相关数据时，请使用下文流程或联系我们。
 
 ### 五、购买与权益
 
-订阅和 App 内购买由 Apple App Store 处理，我们不接收银行卡号或支付方式详情。Motoo 使用 Apple 验证的商品及交易／原始交易标识、购买及到期状态、交易时间与账号关联数据核验会员、恢复购买并防止重复或错误归属。奖励兑换还可能处理兑换记录、奖励权益和必要的账号关联信息。删除 Motoo 账号不等于取消 Apple 自动续订；请在 Apple 账户的订阅管理中取消。
+订阅和 App 内购买由 Apple App Store 处理，我们不接收银行卡号或支付方式详情。Motoo 使用 Apple 验证的商品及交易／原始交易标识、购买及到期状态、交易时间与账号关联数据核验会员、恢复购买并防止重复或错误归属。Motoo 还使用 RevenueCat 处理与订阅和购买管理有关的账号标识、商品、购买记录及权益状态，提供购买管理、客户支持和购买统计分析。奖励兑换还可能处理兑换记录、奖励权益和必要的账号关联信息。删除 Motoo 账号不等于取消 Apple 自动续订；请在 Apple 账户的订阅管理中取消。
 
 ### 六、服务商、存储地区与跨地区处理
 
 - **Apple**：提供私人 iCloud／CloudKit、Sign in with Apple、App Store 购买、地图／地理服务和 APNs 通知。其数据处理和存储适用 [Apple 隐私政策](https://www.apple.com/legal/privacy/)。
 - **Supabase**：提供 Motoo 的账号、共享内容存储、成就记录、权益核验和 AI 请求转发。当前项目数据库区域为日本东京（ap-northeast-1）；边缘函数、网络传输、备份及平台运维不应理解为仅限于该数据库区域。参见 [Supabase 隐私政策](https://supabase.com/privacy)。
+- **RevenueCat**：提供购买及订阅管理服务，并处理上述购买数据和账号标识以支持购买管理与统计分析。参见 [RevenueCat 隐私政策](https://www.revenuecat.com/privacy-policy)。
 - **智谱 AI**：处理经同意提交的图片和识别请求。参见 [智谱开放平台](https://open.bigmodel.cn/) 公布的适用隐私与服务条款；本政策不将其请求处理承诺为只发生在你的设备或 Supabase 数据库区域。
 - **Cloudflare Pages**：托管本隐私政策网页，访问网页时可能处理 IP 地址、浏览器信息和必要访问日志。参见 [Cloudflare 隐私政策](https://www.cloudflare.com/privacypolicy/)。本页面不嵌入广告或第三方分析脚本。
 
-由于上述服务与功能，相关信息可能在你所在国家／地区之外传输、存储或处理。我们使用传输加密、访问控制及账号／藏馆权限限制访问；网络或云服务不代表绝对安全。Motoo 不接入第三方广告或行为分析 SDK，不出售或出租个人信息，不将功能数据用于跨 App 广告追踪。
+由于上述服务与功能，相关信息可能在你所在国家／地区之外传输、存储或处理。我们使用传输加密、访问控制及账号／藏馆权限限制访问；网络或云服务不代表绝对安全。Motoo 不接入第三方广告 SDK；RevenueCat 可对购买记录提供统计分析。我们不出售或出租个人信息，不将功能数据用于跨 App 广告追踪。
 
 服务请求可能产生必要的运行和安全日志，例如 IP 地址、请求时间、响应／错误状态及账号或设备上下文，用于排障、服务可用性和防滥用。这些日志不是广告分析；平台日志和备份的保存与清除受到服务商机制约束。
 
@@ -112,22 +113,23 @@ You can decline and continue local cutouts, manual naming and saving. Disable cl
 
 Sign in with Apple and Supabase Auth provide Motoo accounts. Apple account identifiers, available names and email addresses (including relay addresses), sessions and profile information support authentication and account management. Apple may provide name/email only on first authorisation. Your chosen nickname and avatar may identify you to collection members. Personal core features work without sign-in; sharing, account achievement sync and membership association use accounts.
 
-Creating, joining or saving to a shared collection sends collection names, invitation/member relationships, author identifiers, stickers/thumbnails, captions, comments, likes, activities and timestamps to Supabase. Shared Live memory orbs also upload the relevant photo and paired-video resources; files may contain capture-time and other media metadata, and images themselves may reveal places. Members can view content under collection access permissions, including invitees after joining. Copies saved or exported by members are outside our direct control.
+Creating, joining or saving to a shared collection sends collection names, invitation/member relationships, author identifiers, stickers/thumbnails, captions, comments, likes, activities and timestamps to Supabase, along with any location name, address, latitude, longitude and note you provide for a shared record. Shared Live memory orbs also upload the relevant photo and paired-video resources, which may contain audio; files may contain capture-time, location or other media metadata, and images themselves may reveal places. Members can view content under collection access permissions, including invitees after joining. Copies saved or exported by members are outside our direct control.
 
 Cloud avatars use Supabase Storage. Account-linked device push tokens support Apple APNs shared-activity notifications. Declining notifications does not stop shared-data sync. Leaving a collection, hiding or soft-deleting content is different from immediate physical removal of server files. For account removal or further deletion, use the process below or contact us.
 
 ### 5. Purchases and entitlements
 
-Apple App Store handles subscriptions and in-app purchases. Motoo does not receive card numbers or payment-method details. Apple-verified product and transaction/original-transaction identifiers, purchase/expiry status, transaction times and account associations support membership verification, purchase restoration and ownership checks. Reward redemption may process redemption records, reward entitlements and necessary account associations. Deleting a Motoo account does not cancel an Apple subscription; cancel through your Apple account's subscription settings.
+Apple App Store handles subscriptions and in-app purchases. Motoo does not receive card numbers or payment-method details. Apple-verified product and transaction/original-transaction identifiers, purchase/expiry status, transaction times and account associations support membership verification, purchase restoration and ownership checks. Motoo also uses RevenueCat to process account identifiers, products, purchase history and entitlement status for purchase management, customer support and purchase analytics. Reward redemption may process redemption records, reward entitlements and necessary account associations. Deleting a Motoo account does not cancel an Apple subscription; cancel through your Apple account's subscription settings.
 
 ### 6. Providers, regions and international processing
 
 - **Apple:** private iCloud/CloudKit, Sign in with Apple, App Store, geographic/map services and APNs. See [Apple's Privacy Policy](https://www.apple.com/legal/privacy/).
 - **Supabase:** Motoo authentication, shared storage, achievements, entitlement verification and AI request forwarding. The current project database region is Tokyo, Japan (ap-northeast-1). Edge execution, transit, backups and platform operations should not be assumed to stay exclusively within that database region. See [Supabase's Privacy Policy](https://supabase.com/privacy).
+- **RevenueCat:** purchase and subscription management, including the account identifiers and purchase data described above for purchase management and analytics. See [RevenueCat’s Privacy Policy](https://www.revenuecat.com/privacy-policy).
 - **Zhipu AI:** consented images and recognition requests. See the applicable privacy/service terms published on the [Zhipu Open Platform](https://open.bigmodel.cn/). Processing is not promised to occur only on your device or in the Supabase database region.
 - **Cloudflare Pages:** hosts this policy website and may process IP addresses, browser details and necessary access logs. See [Cloudflare's Privacy Policy](https://www.cloudflare.com/privacypolicy/). This page embeds no advertising or third-party analytics scripts.
 
-These services may transmit, store or process information outside your country/region. We use encrypted transport, access controls and account/collection permissions. Network or cloud services cannot guarantee absolute security. Motoo uses no third-party advertising or behavioural analytics SDKs, does not sell or rent personal information and does not use feature data for cross-app advertising tracking.
+These services may transmit, store or process information outside your country/region. We use encrypted transport, access controls and account/collection permissions. Network or cloud services cannot guarantee absolute security. Motoo uses no third-party advertising SDKs; RevenueCat provides purchase analytics. We do not sell or rent personal information or use feature data for cross-app advertising tracking.
 
 Necessary operational/security logs may include IP address, request time, response/error status and account/device context for troubleshooting, availability and abuse prevention. These are not advertising analytics. Provider log and backup retention follows the relevant platform mechanisms.
 
