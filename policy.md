@@ -29,7 +29,7 @@
 
 ### 三、可选的云端 AI 命名
 
-云端 AI 命名默认关闭。首次使用前，App 说明数据用途并要求明确同意。启用后，拍摄或导入进入预览时，压缩后的主体图片和场景缩略图经 Supabase 转发至智谱 AI（GLM），用于生成名称、识别类别和精细识别结果。场景图片可能包含人物、文字、地点线索或背景；请只提交你有权处理的图片。设备端 Vision 抠图本身不依赖这一上传。
+云端 AI 命名默认关闭，Motoo 提供开启及关闭选择。更新后的 App 将在新开启时说明数据用途并征求同意；此前已经开启的用户保留现有设置。启用后，拍摄或导入进入预览时，压缩后的贴纸主体或回忆球画面经 Supabase 转发至智谱 AI（GLM），用于生成名称、识别类别和精细识别结果；精细识别可能产生额外请求。回忆球画面可能包含人物、文字、地点线索或背景；请只提交你有权处理的图片。英文界面还可能将生成的名称、类别与简短描述发送给智谱 AI 翻译。设备端 Vision 抠图本身不依赖这一上传。
 
 Motoo 使用账号标识（已登录时）、设备标识、图片摘要、请求状态和识别结果管理每日额度、重复请求及服务安全。图片摘要不等于匿名数据，可能与账号或设备关联。Motoo 的额度数据库保存摘要及必要结果，不以额度记录保存图片原件；图片仍会在 AI 请求过程中被服务商处理。
 
@@ -107,7 +107,7 @@ Motoo does not use location or country achievements for advertising tracking or 
 
 ### 3. Optional cloud AI naming
 
-Cloud AI naming is off by default and requires explicit consent after an explanation. When enabled, entering a capture/import preview sends compressed subject and scene images through Supabase to Zhipu AI (GLM) for names, categories and detailed recognition. Scene images may contain people, text, location clues or background details. Submit only images you are entitled to process. On-device Vision cutouts do not require this upload.
+Cloud AI naming is off by default and can be enabled or disabled in Motoo. In the updated app, newly enabling it will explain the data use and ask for consent; users who have already enabled it retain their existing setting. When enabled, entering a capture/import preview sends compressed sticker-subject or memory-orb images through Supabase to Zhipu AI (GLM) for names, categories and detailed recognition; detailed recognition may make additional requests. Memory-orb images may contain people, text, location clues or background details. Submit only images you are entitled to process. In English, the generated name, category and short comment may also be sent to Zhipu AI for translation. On-device Vision cutouts do not require this upload.
 
 Account identifiers when signed in, device identifiers, image hashes, request status and recognition results support daily limits, duplicate checks and security. Hashes may remain linked to an account or device and are not necessarily anonymous. Motoo's quota database stores hashes and necessary results rather than original images; AI providers still process images during the request.
 
